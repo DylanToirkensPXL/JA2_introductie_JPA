@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "contacts")
-public class Contact {
+@Table(name = "contacts") // Deze annotatie zorgt ervoor dat er naar de table "contacts" wordt gezocht
+public class Contact { // en niet de default table "contact"
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
